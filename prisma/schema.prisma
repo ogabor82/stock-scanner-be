@@ -32,7 +32,7 @@ model SymbolOverview {
   sector               String?
   industry             String?
   address              String?
-  PERatio              Float?
-  priceToSalesRatioTTM Float?
-  dividendYield        Float?
+  PERatio              String?
+  priceToSalesRatioTTM String?
+  dividendYield        String?
 }

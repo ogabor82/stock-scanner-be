@@ -27,9 +27,9 @@ export class SymbolService {
     sector: string;
     industry: string;
     address: string;
-    PERatio: number;
-    priceToSalesRatioTTM: number;
-    dividendYield: number;
+    PERatio: string;
+    priceToSalesRatioTTM: string;
+    dividendYield: string;
   }) {
     return prisma.symbolOverview.create({
       data: {
