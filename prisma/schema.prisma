@@ -18,3 +18,21 @@ model Favorite {
   userId Int
   symbol String
 }
+
+model SymbolOverview {
+  id                   Int      @id @default(autoincrement())
+  dateUpdated          DateTime @default(now())
+  symbol               String
+  name                 String
+  description          String?
+  CIK                  String?
+  exchange             String?
+  currency             String?
+  country              String?
+  sector               String?
+  industry             String?
+  address              String?
+  PERatio              Float?
+  priceToSalesRatioTTM Float?
+  dividendYield        Float?
+}
