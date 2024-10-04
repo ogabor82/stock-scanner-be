@@ -29,7 +29,10 @@ export class SymbolService {
     address: string;
     PERatio: string;
     priceToSalesRatioTTM: string;
+    dividendPerShare: string;
     dividendYield: string;
+    marketCapitalization: string;
+    EPS: string;
   }) {
     return prisma.symbolOverview.create({
       data: {
@@ -45,7 +48,10 @@ export class SymbolService {
         address: data.address,
         PERatio: data.PERatio,
         priceToSalesRatioTTM: data.priceToSalesRatioTTM,
+        dividendPerShare: data.dividendPerShare,
         dividendYield: data.dividendYield,
+        marketCapitalization: data.marketCapitalization,
+        EPS: data.EPS,
       },
     });
   }

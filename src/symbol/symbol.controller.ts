@@ -23,26 +23,32 @@ export class SymbolController {
           'DATABASE_HOST',
         )}`,
       );
-      const data = await response.json();
-      if (data.Note) {
+      const responseData = await response.json();
+      if (responseData.Note) {
         return { message: 'API rate limit exceeded' };
       }
-      this.symbolService.create({
-        symbol: data.Symbol,
-        name: data.Name,
-        description: data.Description,
-        CIK: data.CIK,
-        exchange: data.Exchange,
-        currency: data.Currency,
-        country: data.Country,
-        sector: data.Sector,
-        industry: data.Industry,
-        address: data.Address,
-        PERatio: data.PERatio,
-        priceToSalesRatioTTM: data.PriceToSalesRatioTTM,
-        dividendYield: data.DividendYield,
-      });
-      return data;
+
+      const symbolData = {
+        symbol: responseData.Symbol,
+        name: responseData.Name,
+        description: responseData.Description,
+        CIK: responseData.CIK,
+        exchange: responseData.Exchange,
+        currency: responseData.Currency,
+        country: responseData.Country,
+        sector: responseData.Sector,
+        industry: responseData.Industry,
+        address: responseData.Address,
+        PERatio: responseData.PERatio,
+        priceToSalesRatioTTM: responseData.PriceToSalesRatioTTM,
+        dividendPerShare: responseData.DividendPerShare,
+        dividendYield: responseData.DividendYield,
+        marketCapitalization: responseData.MarketCapitalization,
+        EPS: responseData.EPS,
+      };
+
+      this.symbolService.create(symbolData);
+      return symbolData;
     }
     return symbolRes;
   }
