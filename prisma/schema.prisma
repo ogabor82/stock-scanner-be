@@ -36,3 +36,13 @@ model SymbolOverview {
   priceToSalesRatioTTM String?
   dividendYield        String?
 }
+
+model Dividend {
+  id              Int    @id @default(autoincrement())
+  symbol          String
+  exDividendDate  String
+  declarationDate String
+  recordDate      String
+  paymentDate     String
+  amount          String
+}
