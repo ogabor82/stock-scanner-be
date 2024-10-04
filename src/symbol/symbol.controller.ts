@@ -9,11 +9,6 @@ export class SymbolController {
     private readonly configService: ConfigService,
   ) {}
 
-  @Get()
-  async findMany() {
-    return this.symbolService.findMany();
-  }
-
   @Get(':slug')
   async findOne(@Param('slug') slug: string) {
     const symbolRes = await this.symbolService.findOne({ symbol: slug });

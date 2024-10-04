@@ -4,8 +4,14 @@ const prisma = new PrismaClient();
 
 @Injectable()
 export class SymbolService {
-  async findMany() {
-    return prisma.symbolOverview.findMany();
+  async findMany(symbols: string[]) {
+    return prisma.symbolOverview.findMany({
+      where: {
+        symbol: {
+          in: symbols,
+        },
+      },
+    });
   }
 
   async findOne(data: { symbol: string }) {
