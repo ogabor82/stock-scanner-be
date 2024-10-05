@@ -38,6 +38,8 @@ export class SymbolController {
         priceToSalesRatioTTM: responseData.PriceToSalesRatioTTM,
         dividendPerShare: responseData.DividendPerShare,
         dividendYield: responseData.DividendYield,
+        dividendDate: responseData.DividendDate,
+        exDividendDate: responseData.ExDividendDate,
         marketCapitalization: responseData.MarketCapitalization,
         EPS: responseData.EPS,
       };

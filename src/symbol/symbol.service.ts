@@ -37,6 +37,8 @@ export class SymbolService {
     priceToSalesRatioTTM: string;
     dividendPerShare: string;
     dividendYield: string;
+    dividendDate: string;
+    exDividendDate: string;
     marketCapitalization: string;
     EPS: string;
   }) {
@@ -56,6 +58,8 @@ export class SymbolService {
         priceToSalesRatioTTM: data.priceToSalesRatioTTM,
         dividendPerShare: data.dividendPerShare,
         dividendYield: data.dividendYield,
+        dividendDate: data.dividendDate,
+        exDividendDate: data.exDividendDate,
         marketCapitalization: data.marketCapitalization,
         EPS: data.EPS,
       },

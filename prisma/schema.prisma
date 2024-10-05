@@ -36,6 +36,8 @@ model SymbolOverview {
   priceToSalesRatioTTM String?
   dividendYield        String?
   dividendPerShare     String?
+  dividendDate         String?
+  exDividendDate       String?
   marketCapitalization String?
   EPS                  String?
 }
