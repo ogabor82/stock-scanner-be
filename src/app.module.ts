@@ -7,6 +7,8 @@ import { FavoritesService } from './favorites/favorites.service';
 import { SymbolController } from './symbol/symbol.controller';
 import { SymbolService } from './symbol/symbol.service';
 import { PortfolioController } from './portfolio/portfolio.controller';
+import { DividendController } from './dividend/dividend.controller';
+import { DividendService } from './dividend/dividend.service';
 
 @Module({
   imports: [
@@ -19,7 +21,8 @@ import { PortfolioController } from './portfolio/portfolio.controller';
     FavoritesController,
     SymbolController,
     PortfolioController,
+    DividendController,
   ],
-  providers: [AppService, FavoritesService, SymbolService],
+  providers: [AppService, FavoritesService, SymbolService, DividendService],
 })
 export class AppModule {}
