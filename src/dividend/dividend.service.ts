@@ -19,6 +19,9 @@ export class DividendService {
       where: {
         symbol: data.symbol,
       },
+      orderBy: {
+        exDividendDate: 'asc',
+      },
     });
   }
 

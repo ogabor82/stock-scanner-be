@@ -29,6 +29,7 @@ export class DividendController {
         return { message: 'No dividend data found' };
       }
 
+      const dividendList = [];
       for (const dividend of responseData.data) {
         const dividendData = {
           symbol: slug,
@@ -40,9 +41,10 @@ export class DividendController {
         };
 
         this.dividendService.create(dividendData);
+        dividendList.push(dividendData);
       }
 
-      return responseData.data;
+      return dividendList;
     }
     return dividendRes;
   }
