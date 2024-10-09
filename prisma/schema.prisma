@@ -20,26 +20,32 @@ model Favorite {
 }
 
 model SymbolOverview {
-  id                   Int      @id @default(autoincrement())
-  dateUpdated          DateTime @default(now())
-  symbol               String
-  name                 String
-  description          String?
-  CIK                  String?
-  exchange             String?
-  currency             String?
-  country              String?
-  sector               String?
-  industry             String?
-  address              String?
-  PERatio              String?
-  priceToSalesRatioTTM String?
-  dividendYield        String?
-  dividendPerShare     String?
-  dividendDate         String?
-  exDividendDate       String?
-  marketCapitalization String?
-  EPS                  String?
+  id                      Int      @id @default(autoincrement())
+  dateUpdated             DateTime @default(now())
+  symbol                  String
+  name                    String
+  description             String?
+  CIK                     String?
+  exchange                String?
+  currency                String?
+  country                 String?
+  sector                  String?
+  industry                String?
+  address                 String?
+  PERatio                 String?
+  priceToSalesRatioTTM    String?
+  dividendYield           String?
+  dividendPerShare        String?
+  dividendDate            String?
+  exDividendDate          String?
+  marketCapitalization    String?
+  EPS                     String?
+  analystTargetPrice      String?
+  analystRatingStrongBuy  String?
+  analystRatingBuy        String?
+  analystRatingHold       String?
+  analystRatingSell       String?
+  analystRatingStrongSell String?
 }
 
 model Dividend {

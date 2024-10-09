@@ -42,6 +42,12 @@ export class SymbolController {
         exDividendDate: responseData.ExDividendDate,
         marketCapitalization: responseData.MarketCapitalization,
         EPS: responseData.EPS,
+        analystTargetPrice: responseData.AnalystTargetPrice,
+        analystRatingStrongBuy: responseData.AnalystRatingStrongBuy,
+        analystRatingBuy: responseData.AnalystRatingBuy,
+        analystRatingHold: responseData.AnalystRatingHold,
+        analystRatingSell: responseData.AnalystRatingSell,
+        analystRatingStrongSell: responseData.AnalystRatingStrongSell,
       };
 
       this.symbolService.create(symbolData);

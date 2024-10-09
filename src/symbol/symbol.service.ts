@@ -41,6 +41,12 @@ export class SymbolService {
     exDividendDate: string;
     marketCapitalization: string;
     EPS: string;
+    analystTargetPrice: string;
+    analystRatingStrongBuy: string;
+    analystRatingBuy: string;
+    analystRatingHold: string;
+    analystRatingSell: string;
+    analystRatingStrongSell: string;
   }) {
     return prisma.symbolOverview.create({
       data: {
@@ -62,6 +68,12 @@ export class SymbolService {
         exDividendDate: data.exDividendDate,
         marketCapitalization: data.marketCapitalization,
         EPS: data.EPS,
+        analystTargetPrice: data.analystTargetPrice,
+        analystRatingStrongBuy: data.analystRatingStrongBuy,
+        analystRatingBuy: data.analystRatingBuy,
+        analystRatingHold: data.analystRatingHold,
+        analystRatingSell: data.analystRatingSell,
+        analystRatingStrongSell: data.analystRatingStrongSell,
       },
     });
   }
